@@ -33,7 +33,6 @@
 - zone
 - region : 전세계 24개의 region
 - pop : region과 region을 연결하기 전 위치한 거.. 자세한건 잘 모름
-
 - template : H/W & image (OS type)구성. MIG(Managed Instance Group)
 - template을 통해서 instance group을 만들고 IG를 통해서 여러개의 VM을 만든다.
 - User <-> Load Balancing(External IP) <-> Server(service 제공) 구성
@@ -49,8 +48,21 @@
 - Shared VPC : 서로 다른 Project 끼리 통신
 - SAL(Service Agreement Level) : 얼마나 해당 service가 잘 동작하는지 보장해주는 수치 (100은 100%)
 
+## GCP DB 개념
+- Data의 종류: structured, unstructured
+- Transactional DB :  유저의 traffic에 의해서 저장되는 정보 (live한 정보라 data type도 안 맞기도 하고 null값도 많음). Write 성능이 중요함
+- ETL(Extract Transaction Load): 분석이 용이하게끔 Transactional DB를 변형.
+- Analytical DB: ETL에 의해서 추출된 Data.
+- Data가 저장되는 형태 (structured data 기준): SQL(db table), noSQL(key-value 형태)
+- 각 **Data 형태에 따라서 GCP에서 제공하는 DB schema를 구축하고 GCP의 DB service를 선택해서 사용하는 것이 중요**
 
-
+## GCP container 개념
+- 하나의 서버에 구성되는 system architecture : H/W - Kernel - Dependencies(Library) - Application code
+- 위 구성에서는 dependency가 존재하기 때문에 활용도가 낮음. 그래서 VM이 도입됨. VM위에 OS별로 kernel을 설치하면서 dependency를 해결. 그래서 하나의 H/W, 하나의 Kernel 위에 서로다른 Dependencies를 구축해서 사용 Dependencies - Application code를 container라고 한다. 
+- 이렇게 구성하게 되면 OS와 H/W에 자유로운 구성.
+- 자유로운 구성의 장점 때문에 수많은 Container가 생겨나는데 이를 관리하기 위한 S/W를 Kubernetes라고 한다.
+- Kubernetes는 보통 master node에 설치가 되고 이를 관리하는데, 관리하는 방법이 쉽지 않아서, 구글자체적으로 관리형 kubernetes를 제공하는데(Google Kubernetes Engine) 이를 사용하면 master node는 보이지 않고 그냥 node 생성만 해서 쓰기만 하면된다.
+- Kubernetes안에서 Service는 Load Balancing의 역할을 한다.
 
 
 
