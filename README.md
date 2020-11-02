@@ -8,3 +8,20 @@
    - 그 다음이 cloud. cloud의 목적은 완전 자동화
    - [구글 클라우드 서버가 위치한 지역](clould.google.com/about/locations)
    
+## 용어
+- zone
+- region : 전세계 24개의 region
+- pop : region과 region을 연결하기 전 위치한 거.. 자세한건 잘 모름
+
+## Resource hierarchy level
+- Org-node : Samsung.com (회사 전체)
+- folders : 조직도 (project를 관리하기 위한 개념)
+- Project : 조직 내부 태스크
+   - ID, name, number
+   - 권한 관리 : 이메일로 유저 id를 관리함. clould identity로 동기화 시킬 수 있다.
+      - 3가지 role이 존재,
+         - primitive : project level에서 권한 설정 (Owner, Editor, Viewer, Billing Administrator, Brwoser) GCP -> IAMM admin -> add. service account를 통해서 resource 별 권한 설정이 가능한 것.
+         - predefind : resource level에서 권한 설정
+         - custom
+
+
