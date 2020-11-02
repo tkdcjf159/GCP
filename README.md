@@ -24,4 +24,8 @@
          - predefind : resource level에서 권한 설정
          - custom
 
-
+## cloud 제품
+- SASS(Software AS a Service) : market place에 있는 여러 application이 있음.
+- VPC(Vertual Private Cloud) : SDN(Software-Defined Network)
+- 외부 IP, 내부 IP
+- project 하위에 여러 resource를 만들수 있고 각 resource 끼리는 VPC로 통신한다. 같은 네트워크로 묶이면 서로 통신 가능(서로 zone이 다르더라도..)
