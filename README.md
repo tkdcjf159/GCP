@@ -51,7 +51,7 @@
 ## GCP DB 개념
 - Data의 종류: structured, unstructured
 - Transactional DB :  유저의 traffic에 의해서 저장되는 정보 (live한 정보라 data type도 안 맞기도 하고 null값도 많음). Write 성능이 중요함
-- ETL(Extract Transaction Load): 분석이 용이하게끔 Transactional DB를 변형.
+- ETL(Extract Translate Load): 분석이 용이하게끔 Transactional DB를 변형.
 - Analytical DB: ETL에 의해서 추출된 Data.
 - Data가 저장되는 형태 (structured data 기준): SQL(db table), noSQL(key-value 형태)
 - 각 **Data 형태에 따라서 GCP에서 제공하는 DB schema를 구축하고 GCP의 DB service를 선택해서 사용하는 것이 중요**
