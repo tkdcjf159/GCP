@@ -55,6 +55,8 @@
 - Analytical DB: ETL에 의해서 추출된 Data.
 - Data가 저장되는 형태 (structured data 기준): SQL(db table), noSQL(key-value 형태)
 - 각 **Data 형태에 따라서 GCP에서 제공하는 DB schema를 구축하고 GCP의 DB service를 선택해서 사용하는 것이 중요**
+- Data Warehouse: Data의 형태와 스키마가 비슷하면 ETL을 거쳐서 바로 저장하는 것이 유리한 형태. 사용자가 원하는 형태의 데이터로 저장되어 있는 저장소. 
+- Data Lake : Data 저장소. type이 중구난방
 
 ## GCP container 개념
 - 하나의 서버에 구성되는 system architecture : H/W - Kernel - Dependencies(Library) - Application code
