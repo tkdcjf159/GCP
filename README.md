@@ -77,3 +77,8 @@
    - integer range
 - clustering : 
    - partitioning 되어있는 table에서 clustering까지 추가해서 정렬을 다시 해서 쓰면 read 해야하는 작업이 줄어들 수 있기때문에 더 효율적인 관리가 가능하다.
+- ETL (Extract, Transform, Load)
+   - ETL 지원 프로그램
+      - Data proc(managed service) : Hadoop, spark, Hive - Data fusion제품을 사용해서 UI로 컨트롤
+      - Data flow(Serverless) : Apache Beam - python, java coding 필요 (Dataprep을 사용한 UI 컨트롤)
+   
