@@ -82,3 +82,6 @@
       - Data proc(managed service) : Hadoop, spark, Hive - Data fusion제품을 사용해서 UI로 컨트롤
       - Data flow(Serverless) : Apache Beam - python, java coding 필요 (Dataprep을 사용한 UI 컨트롤)
    
+-streaming data를 ETL
+  - scale out : big data를 shading 한 data -> worker에 할당 (mapping) -> 계산하는 과정에서 shuffling -> 분석된 data를 reduce (MapReduce) 
+  - MapReduce 알고리즘을 바탕으로 만들어진 open source program이 Hadoop. 성능 개선해보자 Spark, 코딩이 좀 쉽게 해보자 Pig (Haddop Eco System)
