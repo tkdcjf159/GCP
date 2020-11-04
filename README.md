@@ -71,6 +71,9 @@
    - table을 하나로 관리하면 데이터 중복현상이 일어나면서 테이블이 크고 무거워지는 단점.
    - table을 쪼개서 관리하면 효율적으로 데이터를 저장할 수 있다. 그러나 분석할 경우에 쪼개진 table을 join하는 과정이 필요하고 분석에 용이한 구조가 아니다.
    - 이러한 기회비용의 단점을 극복하고자 기존의 scalar 값만 저장할 수 있었던 table에 join의 특성(table in table)을 활용하여 array나 struct 데이터도 DB에 저장이 가능하게 끔 설정함. 이를 Nested repeated table이라 한다.
-   - 
-
-
+- partition BigQuery tables 
+   - Ingestion Time : the data's ingestion(load) time or arrival time
+   - Date/timestamp/datetime : based on TIMESTAMP
+   - integer range
+- clustering : 
+   - partitioning 되어있는 table에서 clustering까지 추가해서 정렬을 다시 해서 쓰면 read 해야하는 작업이 줄어들 수 있기때문에 더 효율적인 관리가 가능하다.
