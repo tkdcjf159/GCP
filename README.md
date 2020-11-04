@@ -66,7 +66,11 @@
 - Kubernetes는 보통 master node에 설치가 되고 이를 관리하는데, 관리하는 방법이 쉽지 않아서, 구글자체적으로 관리형 kubernetes를 제공하는데(Google Kubernetes Engine) 이를 사용하면 master node는 보이지 않고 그냥 node 생성만 해서 쓰기만 하면된다.
 - Kubernetes안에서 Service는 Load Balancing의 역할을 한다.
 
-
-
+## Build a Data Warehouse
+- Normalize vs Denormalize
+   - table을 하나로 관리하면 데이터 중복현상이 일어나면서 테이블이 크고 무거워지는 단점.
+   - table을 쪼개서 관리하면 효율적으로 데이터를 저장할 수 있다. 그러나 분석할 경우에 쪼개진 table을 join하는 과정이 필요하고 분석에 용이한 구조가 아니다.
+   - 이러한 기회비용의 단점을 극복하고자 기존의 scalar 값만 저장할 수 있었던 table에 join의 특성(table in table)을 활용하여 array나 struct 데이터도 DB에 저장이 가능하게 끔 설정함. 이를 Nested repeated table이라 한다.
+   - 
 
 
